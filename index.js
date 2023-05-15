@@ -31,7 +31,7 @@ function demCacSoDuong() {
   document.getElementById("demSoDuong").innerHTML =
     "Có tất cả: " + demCacSoDuong + " số nguyên dương.";
 }
-// Bài 4: Tìm số nhỏ nhất
+// Bài 3: Tìm số nhỏ nhất
 function timSoNhoNhat() {
   var min = mangDuLieu[0];
   for (var i = 0; i < mangDuLieu.length; i++) {
@@ -41,6 +41,37 @@ function timSoNhoNhat() {
   }
   document.getElementById("timSoNhoNhat").innerHTML = "Số nhỏ nhất là: " + min;
 }
+// =======bai 4=========
+
+function timSoDuongNhoNhat() {
+  var mangDuLieuDuong = [];
+  for (var i = 0; i < mangDuLieu.length; i++) {
+    var duLieuDuong = 0;
+
+    if (mangDuLieu[i] > 0) {
+      duLieuDuong = mangDuLieu[i];
+      console.log(duLieuDuong);
+      mangDuLieuDuong.push(mangDuLieu[i]);
+    }
+  }
+
+  // mangDuLieuDuong.push(duLieuDuong);
+  console.log(mangDuLieuDuong);
+  // for (var i = 0; i < mangDuLieu.length; i++) {
+  //   if (0 < mangDuLieu[i] && bienMin > mangDuLieu[i]) {
+  //     bienMin = mangDuLieu[i];
+  //   }
+  // }
+  var bienMin = mangDuLieuDuong[0];
+  for (var z = 0; z < mangDuLieuDuong.length; z++) {
+    if (bienMin > mangDuLieuDuong[z]) {
+      bienMin = mangDuLieuDuong[z];
+    }
+  }
+  document.getElementById("soDuongNhoNhat").innerHTML =
+    "Số dương nhỏ nhất là: " + bienMin;
+}
+
 // ===Bai 5============
 function timSoChanCuoi() {
   var soChanCuoi = 0;
