@@ -110,7 +110,7 @@ function hoanDoiViTri() {
 function sapXepTangDan() {
   var mangDuLieu2 = [];
   for (var i = 0; i < mangDuLieu.length; i++) {
-    var duLieu2 = parseInt(mangDuLieu[i], 10);
+    var duLieu2 = parseFloat(mangDuLieu[i]);
 
     mangDuLieu2.push(duLieu2);
     //   console.log(mangDuLieu2);
